@@ -14,8 +14,8 @@ export default function Loading({ message = 'Loading...', size = 'medium' }: Loa
   
   return (
     <div className="text-center py-12">
-      <div className={`inline-block ${sizeClasses[size]} animate-spin rounded-full border-4 border-solid border-blue-400 border-r-transparent`}></div>
+      <div className={`inline-block ${sizeClasses[size]} animate-spin rounded-full border-4 border-solid border-[rgb(var(--color-primary))] border-r-transparent`}></div>
       {message && <p className="mt-4 text-gray-400">{message}</p>}
     </div>
   );
-} 
+}
