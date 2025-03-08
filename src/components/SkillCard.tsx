@@ -7,10 +7,10 @@ interface SkillCardProps {
 
 export default function SkillCard({ title, description }: SkillCardProps) {
   return (
-    <Card>
-      <div className="p-6">
-        <h3 className="text-xl font-semibold mb-3 text-teal-600 dark:text-teal-400">{title}</h3>
-        <p className="text-gray-600 dark:text-gray-300">{description}</p>
+    <Card className="group h-full">
+      <div className="p-5 h-full flex flex-col">
+        <h3 className="text-lg font-semibold mb-3 text-[rgb(var(--color-primary))] group-hover:text-gradient transition-all duration-300">{title}</h3>
+        <p className="text-[rgb(var(--color-text-secondary))] text-sm leading-relaxed">{description}</p>
       </div>
     </Card>
   );

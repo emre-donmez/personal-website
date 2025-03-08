@@ -3,31 +3,89 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 245, 245, 245;
-  --background-end-rgb: 255, 255, 255;
+  /* Ana renkler */
+  --color-primary: 20, 184, 166; /* teal-500 */
+  --color-secondary: 161, 161, 170; /* zinc-400 */
+  --color-accent: 244, 114, 182; /* pink-500 */
+  
+  /* Koyu tema (tek tema olarak kullanılacak) */
+  --color-bg: 10, 10, 10; /* Neredeyse siyah arka plan */
+  --color-bg-secondary: 24, 24, 27; /* Koyu zinc */
+  --color-text: 250, 250, 250; /* Beyaza yakın metin */
+  --color-text-secondary: 161, 161, 170; /* zinc-400 */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 30, 30, 30;
+@layer base {
+  body {
+    @apply bg-[rgb(var(--color-bg))] text-[rgb(var(--color-text))];
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  /* Özel bileşen stilleri */
+  .card {
+    @apply bg-[rgb(var(--color-bg-secondary))] 
+           border border-zinc-800/30 rounded-lg shadow-lg 
+           backdrop-blur-sm transition-all duration-300
+           hover:shadow-xl hover:border-zinc-700/50;
+  }
+  
+  .section-title {
+    @apply text-3xl font-bold text-center mb-10 text-[rgb(var(--color-text))]
+           relative inline-block after:content-[''] after:absolute after:w-16 after:h-[3px] 
+           after:bg-[rgb(var(--color-primary))] after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:rounded-full;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-colors duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-[rgb(var(--color-primary))] text-white hover:bg-[rgb(var(--color-primary))/90];
+  }
+  
+  .btn-secondary {
+    @apply bg-zinc-800 text-white hover:bg-zinc-700;
+  }
+  
+  .btn-outline {
+    @apply border border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))] 
+           hover:bg-[rgb(var(--color-primary))/10];
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[rgb(var(--color-primary))] to-[rgb(var(--color-accent))];
+  }
+  
+  .bg-gradient {
+    @apply bg-gradient-to-br from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg-secondary))] to-[rgb(var(--color-bg))];
+  }
+  
+  .section-spacing {
+    @apply py-16 md:py-20;
+  }
+  
+  .content-spacing {
+    @apply mb-6 md:mb-8;
   }
 } 

@@ -5,22 +5,25 @@ import { PERSONAL_INFO, SOCIAL_LINKS } from '../config/constants';
 
 export default function Contact() {
   return (
-    <Section id="contact" title="Contact" bgColor="zinc">
-      <div className="max-w-4xl mx-auto">
-        <Card className="p-8">
-          <p className="text-center text-gray-600 dark:text-gray-300 mb-8">
+    <Section id="contact" title="Contact" bgColor="secondary">
+      <div className="max-w-3xl mx-auto">
+        <Card className="p-6 md:p-8">
+          <p className="text-center text-[rgb(var(--color-text-secondary))] mb-8 leading-relaxed max-w-xl mx-auto">
             Feel free to reach out for questions about my projects, collaboration opportunities, or just to connect.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <a 
               href={SOCIAL_LINKS.email} 
-              className="flex items-center p-4 bg-gray-100 dark:bg-zinc-700/50 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-700 transition border border-gray-200 dark:border-zinc-600/50"
+              className="group flex items-center p-4 rounded-lg border border-[rgb(var(--color-bg-secondary))]/80 hover:border-[rgb(var(--color-primary))]/30 transition-all duration-300"
+              aria-label="Email"
             >
-              <FaEnvelope className="text-2xl text-teal-600 dark:text-teal-400 mr-4" />
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[rgb(var(--color-primary))]/10 mr-3 group-hover:bg-[rgb(var(--color-primary))]/20 transition-all duration-300">
+                <FaEnvelope className="text-lg text-[rgb(var(--color-primary))]" />
+              </div>
               <div>
-                <h3 className="font-medium text-gray-800 dark:text-gray-200">Email</h3>
-                <p className="text-gray-600 dark:text-gray-400">{PERSONAL_INFO.email}</p>
+                <h3 className="font-medium text-[rgb(var(--color-text))] mb-0.5 text-sm">Email</h3>
+                <p className="text-[rgb(var(--color-text-secondary))] text-xs">{PERSONAL_INFO.email}</p>
               </div>
             </a>
             
@@ -28,12 +31,15 @@ export default function Contact() {
               href={SOCIAL_LINKS.linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center p-4 bg-gray-100 dark:bg-zinc-700/50 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-700 transition border border-gray-200 dark:border-zinc-600/50"
+              className="group flex items-center p-4 rounded-lg border border-[rgb(var(--color-bg-secondary))]/80 hover:border-[rgb(var(--color-primary))]/30 transition-all duration-300"
+              aria-label="LinkedIn"
             >
-              <FaLinkedin className="text-2xl text-teal-600 dark:text-teal-400 mr-4" />
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[rgb(var(--color-primary))]/10 mr-3 group-hover:bg-[rgb(var(--color-primary))]/20 transition-all duration-300">
+                <FaLinkedin className="text-lg text-[rgb(var(--color-primary))]" />
+              </div>
               <div>
-                <h3 className="font-medium text-gray-800 dark:text-gray-200">LinkedIn</h3>
-                <p className="text-gray-600 dark:text-gray-400">linkedin.com/in/{PERSONAL_INFO.linkedin}</p>
+                <h3 className="font-medium text-[rgb(var(--color-text))] mb-0.5 text-sm">LinkedIn</h3>
+                <p className="text-[rgb(var(--color-text-secondary))] text-xs">linkedin.com/in/{PERSONAL_INFO.linkedin}</p>
               </div>
             </a>
             
@@ -41,12 +47,15 @@ export default function Contact() {
               href={SOCIAL_LINKS.github} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center p-4 bg-gray-100 dark:bg-zinc-700/50 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-700 transition border border-gray-200 dark:border-zinc-600/50"
+              className="group flex items-center p-4 rounded-lg border border-[rgb(var(--color-bg-secondary))]/80 hover:border-[rgb(var(--color-primary))]/30 transition-all duration-300"
+              aria-label="GitHub"
             >
-              <FaGithub className="text-2xl text-teal-600 dark:text-teal-400 mr-4" />
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[rgb(var(--color-primary))]/10 mr-3 group-hover:bg-[rgb(var(--color-primary))]/20 transition-all duration-300">
+                <FaGithub className="text-lg text-[rgb(var(--color-primary))]" />
+              </div>
               <div>
-                <h3 className="font-medium text-gray-800 dark:text-gray-200">GitHub</h3>
-                <p className="text-gray-600 dark:text-gray-400">github.com/{PERSONAL_INFO.github}</p>
+                <h3 className="font-medium text-[rgb(var(--color-text))] mb-0.5 text-sm">GitHub</h3>
+                <p className="text-[rgb(var(--color-text-secondary))] text-xs">github.com/{PERSONAL_INFO.github}</p>
               </div>
             </a>
             
@@ -54,12 +63,15 @@ export default function Contact() {
               href={SOCIAL_LINKS.medium} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center p-4 bg-gray-100 dark:bg-zinc-700/50 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-700 transition border border-gray-200 dark:border-zinc-600/50"
+              className="group flex items-center p-4 rounded-lg border border-[rgb(var(--color-bg-secondary))]/80 hover:border-[rgb(var(--color-primary))]/30 transition-all duration-300"
+              aria-label="Medium"
             >
-              <FaMedium className="text-2xl text-teal-600 dark:text-teal-400 mr-4" />
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-[rgb(var(--color-primary))]/10 mr-3 group-hover:bg-[rgb(var(--color-primary))]/20 transition-all duration-300">
+                <FaMedium className="text-lg text-[rgb(var(--color-primary))]" />
+              </div>
               <div>
-                <h3 className="font-medium text-gray-800 dark:text-gray-200">Medium</h3>
-                <p className="text-gray-600 dark:text-gray-400">medium.com/@{PERSONAL_INFO.medium}</p>
+                <h3 className="font-medium text-[rgb(var(--color-text))] mb-0.5 text-sm">Medium</h3>
+                <p className="text-[rgb(var(--color-text-secondary))] text-xs">medium.com/@{PERSONAL_INFO.medium}</p>
               </div>
             </a>
           </div>

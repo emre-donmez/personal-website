@@ -24,17 +24,17 @@ export default function Blog() {
   }, []);
 
   return (
-    <Section id="blog" title="Medium Articles" bgColor="black">
+    <Section id="blog" title="Medium Articles" bgColor="primary">
       {loading ? (
         <Loading message="Loading Medium articles..." />
       ) : posts.length > 0 ? (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {posts.map((post, index) => (
-            <Card key={index}>
+            <Card key={index} className="group h-full">
               <CardContent>
-                <h3 className="text-xl font-semibold mb-2 text-teal-400 line-clamp-2">{post.title}</h3>
+                <h3 className="text-lg font-semibold mb-3 text-[rgb(var(--color-primary))] group-hover:text-gradient transition-all duration-300 line-clamp-2">{post.title}</h3>
                 <div className="mb-4">
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-[rgb(var(--color-text-secondary))/80] text-xs">
                     {new Date(post.pubDate).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
@@ -42,9 +42,9 @@ export default function Blog() {
                     })}
                   </p>
                 </div>
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-1.5 mb-3">
                   {post.categories.slice(0, 3).map((category, idx) => (
-                    <span key={idx} className="px-2 py-1 bg-zinc-700/50 text-gray-300 text-xs rounded">
+                    <span key={idx} className="px-2 py-0.5 bg-[rgb(var(--color-bg-secondary))]/70 text-[rgb(var(--color-text-secondary))] text-xs rounded">
                       {category}
                     </span>
                   ))}
@@ -59,13 +59,13 @@ export default function Blog() {
           ))}
         </div>
       ) : (
-        <div className="text-center py-12 text-gray-400">
+        <div className="text-center py-8 text-[rgb(var(--color-text-secondary))]">
           <p>Error loading Medium articles or no articles found.</p>
         </div>
       )}
       
       <div className="text-center mt-10">
-        <Button href={SOCIAL_LINKS.medium} external>
+        <Button href={SOCIAL_LINKS.medium} variant="outline" external>
           View All Articles
         </Button>
       </div>

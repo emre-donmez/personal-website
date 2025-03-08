@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <footer className="py-8 px-4 bg-black border-t border-zinc-800/50">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-gray-400">
+    <footer className="py-8 px-4 bg-[rgb(var(--color-bg))] border-t border-[rgb(var(--color-bg-secondary))]/30">
+      <div className="max-w-5xl mx-auto text-center">
+        <p className="text-[rgb(var(--color-text-secondary))/50] text-xs">
           &copy; {new Date().getFullYear()} Emre Dönmez. All rights reserved.
         </p>
       </div>

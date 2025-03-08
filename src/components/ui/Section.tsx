@@ -4,17 +4,21 @@ interface SectionProps {
   id: string;
   title: string;
   children: React.ReactNode;
-  bgColor?: 'black' | 'zinc';
+  bgColor?: 'primary' | 'secondary';
   className?: string;
 }
 
-export default function Section({ id, title, children, bgColor = 'black', className = '' }: SectionProps) {
-  const bgColorClass = bgColor === 'black' ? 'bg-black' : 'bg-zinc-900/50';
+export default function Section({ id, title, children, bgColor = 'primary', className = '' }: SectionProps) {
+  const bgColorClass = bgColor === 'primary' 
+    ? 'bg-[rgb(var(--color-bg))]' 
+    : 'bg-[rgb(var(--color-bg-secondary))]';
   
   return (
-    <section id={id} className={`py-20 px-4 ${bgColorClass} ${className}`}>
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12 text-white">{title}</h2>
+    <section id={id} className={`section-spacing px-4 ${bgColorClass} ${className}`}>
+      <div className="max-w-5xl mx-auto">
+        <div className="flex justify-center mb-12">
+          <h2 className="section-title">{title}</h2>
+        </div>
         {children}
       </div>
     </section>
