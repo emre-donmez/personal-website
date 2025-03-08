@@ -48,7 +48,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-gray-100">
+    <div className="flex flex-col min-h-screen bg-white text-gray-800 dark:bg-black dark:text-gray-100 transition-colors duration-300">
       <Navbar activeSection={activeSection} scrollToSection={scrollToSection} />
       <Hero />
       <About />
@@ -59,4 +59,4 @@ export default function Home() {
       <Footer />
     </div>
   );
-}
+} 
