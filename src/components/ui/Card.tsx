@@ -11,7 +11,11 @@ export default function Card({ children, className = '', hoverEffect = true }: C
     <div 
       className={`
         card
-        ${hoverEffect ? 'hover:translate-y-[-5px] hover:shadow-[0_10px_25px_-5px_rgba(var(--color-primary),0.15)]' : ''}
+        bg-[rgba(var(--color-bg-secondary),0.6)]
+        backdrop-filter backdrop-blur-sm
+        border border-[rgba(var(--color-primary),0.05)]
+        rounded-lg overflow-hidden
+        ${hoverEffect ? 'hover:translate-y-[-5px] hover:shadow-[0_15px_30px_-10px_rgba(var(--color-primary),0.15)]' : ''}
         transition-all duration-500 ease-in-out
         ${className}
       `}
@@ -31,7 +35,7 @@ export function CardContent({ children, className = '' }: { children: React.Reac
 
 export function CardFooter({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   return (
-    <div className={`px-6 py-4 border-t border-[rgb(var(--color-primary))]/10 ${className}`}>
+    <div className={`px-6 py-4 border-t border-[rgba(var(--color-primary),0.08)] ${className}`}>
       {children}
     </div>
   );

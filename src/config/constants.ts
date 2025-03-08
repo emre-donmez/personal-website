@@ -1,9 +1,9 @@
 // Kişisel bilgiler
 export const PERSONAL_INFO = {
-  name: 'Emre Dönmez',
+  name: 'Emrecan Dönmez',
   title: 'Software Developer',
-  email: 'emrecandonmez@gmail.com',
-  bio: 'A dedicated software developer specialized in .NET Core, SQL, RESTful APIs, CI/CD, and JavaScript, focused on continuous improvement and delivering value through innovative solutions.',
+  email: 'emrecandonmez.bt@gmail.com',
+  bio: 'A software developer dedicated to creating value through innovative solutions and continuous improvement.',
   github: 'emre-donmez',
   medium: 'emrecandonmez',
   linkedin: 'emredonmez'

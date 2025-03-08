@@ -21,13 +21,14 @@ export default function Hero() {
       </div>
       
       <div className="relative z-10 max-w-3xl mx-auto">
-        <div className="mb-8 relative w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full overflow-hidden border-2 border-[rgb(var(--color-primary))]/50 shadow-xl shadow-[rgb(var(--color-primary))]/20 transition-all duration-300 hover:shadow-[rgb(var(--color-primary))]/30 hover:scale-105">
+        <div className="mb-8 relative w-36 h-36 md:w-44 md:h-44 mx-auto rounded-full overflow-hidden border-2 border-[rgb(var(--color-primary))]/50 shadow-xl shadow-[rgb(var(--color-primary))]/20 transition-all duration-300 hover:shadow-[rgb(var(--color-primary))]/30 hover:scale-105">
           <Image 
             src={DEFAULT_PROFILE_IMAGE}
             alt={PERSONAL_INFO.name} 
             fill
             className="object-cover"
             priority
+            sizes="(max-width: 768px) 144px, 176px"
           />
         </div>
         
@@ -39,6 +40,15 @@ export default function Hero() {
         </p>
         
         <div className="flex justify-center space-x-8 mb-10">
+          <a 
+            href={SOCIAL_LINKS.linkedin} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-2xl text-[rgb(var(--color-text-secondary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300 hover:scale-110"
+            aria-label="LinkedIn Profile"
+          >
+            <FaLinkedin />
+          </a>
           <a 
             href={SOCIAL_LINKS.github} 
             target="_blank" 
@@ -56,16 +66,7 @@ export default function Hero() {
             aria-label="Medium Blog"
           >
             <FaMedium />
-          </a>
-          <a 
-            href={SOCIAL_LINKS.linkedin} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="text-2xl text-[rgb(var(--color-text-secondary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300 hover:scale-110"
-            aria-label="LinkedIn Profile"
-          >
-            <FaLinkedin />
-          </a>
+          </a>          
         </div>
         
         <div>

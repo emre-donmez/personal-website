@@ -6,12 +6,8 @@ export default function About() {
     <Section id="about" title="About Me" bgColor="secondary">
       <div className="max-w-3xl mx-auto">
         <Card className="p-6 md:p-8">
-          <p className="text-[rgb(var(--color-text))] content-spacing leading-relaxed">
-            Hello, I'm Emre! A software developer dedicated to creating value through innovative solutions and continuous improvement.
-            I actively participate in every phase of the software development lifecycle, valuing teamwork and quality code production.
-          </p>
           <p className="text-[rgb(var(--color-text))] mb-8 leading-relaxed">
-            I focus on developing sustainable, high-quality software using clean code principles, design patterns, and Agile methodology.
+            I focus on developing sustainable, high-quality software using clean code principles, design patterns, and agile methodology.
           </p>
           
           <h3 className="text-xl font-semibold mb-5 text-[rgb(var(--color-primary))]">Professional Approach</h3>
