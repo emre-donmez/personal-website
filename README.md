@@ -1,4 +1,4 @@
-# Emrecan Dönmez Personal Website
+Personal Website
 
 This project is the personal website of Emrecan Dönmez. It was developed using Next.js, TypeScript, and Tailwind CSS.
 
