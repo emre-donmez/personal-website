@@ -4,13 +4,13 @@
 
 :root {
   /* Ana renkler */
-  --color-primary: 20, 184, 166; /* teal-500 */
+  --color-primary: 22, 183, 232; /* İstenilen mavi renk */
   --color-secondary: 161, 161, 170; /* zinc-400 */
   --color-accent: 244, 114, 182; /* pink-500 */
   
   /* Koyu tema (tek tema olarak kullanılacak) */
-  --color-bg: 10, 10, 10; /* Neredeyse siyah arka plan */
-  --color-bg-secondary: 24, 24, 27; /* Koyu zinc */
+  --color-bg: 8, 8, 10; /* Daha koyu siyah arka plan */
+  --color-bg-secondary: 18, 18, 22; /* Daha koyu zinc */
   --color-text: 250, 250, 250; /* Beyaza yakın metin */
   --color-text-secondary: 161, 161, 170; /* zinc-400 */
 }
@@ -78,7 +78,17 @@
   }
   
   .bg-gradient {
-    @apply bg-gradient-to-br from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg-secondary))] to-[rgb(var(--color-bg))];
+    @apply bg-gradient-to-br from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg-secondary))] to-[rgb(var(--color-bg))] transition-all duration-500;
+  }
+  
+  /* Daha yumuşak arka plan geçişi için yeni sınıf */
+  .bg-soft-gradient {
+    @apply bg-gradient-to-br from-[rgb(var(--color-bg))] via-[rgb(var(--color-bg-secondary))/90] to-[rgb(var(--color-bg))] backdrop-blur-sm;
+  }
+  
+  /* Daha koyu arka plan geçişi için yeni sınıf */
+  .bg-dark-gradient {
+    @apply bg-gradient-to-br from-black via-[rgb(var(--color-bg-secondary))/80] to-black backdrop-blur-sm;
   }
   
   .section-spacing {

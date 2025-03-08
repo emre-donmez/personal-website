@@ -35,62 +35,74 @@ export default function MobileMenu({ activeSection, scrollToSection }: MobileMen
     <>
       <button 
         onClick={toggleMenu} 
-        className="md:hidden text-gray-600 dark:text-gray-300 p-2"
+        className="md:hidden text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300 border border-[rgb(var(--color-primary))]/20 rounded-md hover:bg-[rgb(var(--color-primary))]/5"
         aria-label="Toggle mobile menu"
       >
-        ☰
+        <span className="text-xl">☰</span>
       </button>
       
       {isOpen && (
-        <div className="fixed inset-0 bg-white dark:bg-black z-50 flex flex-col">
-          <div className="flex justify-end p-4">
+        <div className="fixed inset-0 bg-[#000000] z-50 flex flex-col">
+          {/* Üst kısım - Kapatma butonu */}
+          <div className="flex justify-end p-4 border-b border-[rgb(var(--color-primary))]/20 relative z-10 bg-[#000000]">
             <button 
               onClick={toggleMenu}
-              className="text-gray-600 dark:text-gray-300 p-2"
+              className="text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300 border border-[rgb(var(--color-primary))]/20 rounded-md hover:bg-[rgb(var(--color-primary))]/5"
               aria-label="Close mobile menu"
             >
-              <FaTimes className="w-6 h-6" />
+              <FaTimes className="w-5 h-5" />
             </button>
           </div>
           
-          <div className="flex flex-col items-center justify-center flex-grow space-y-8 text-xl">
-            <button 
-              onClick={() => handleMenuClick('home')}
-              className={`${activeSection === 'home' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => handleMenuClick('about')}
-              className={`${activeSection === 'about' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              About
-            </button>
-            <button 
-              onClick={() => handleMenuClick('skills')}
-              className={`${activeSection === 'skills' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              Skills
-            </button>
-            <button 
-              onClick={() => handleMenuClick('projects')}
-              className={`${activeSection === 'projects' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              Projects
-            </button>
-            <button 
-              onClick={() => handleMenuClick('blog')}
-              className={`${activeSection === 'blog' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              Blog
-            </button>
-            <button 
-              onClick={() => handleMenuClick('contact')}
-              className={`${activeSection === 'contact' ? 'text-teal-600 dark:text-teal-400' : 'text-gray-600 dark:text-gray-300'} hover:text-teal-600 dark:hover:text-teal-400 transition`}
-            >
-              Contact
-            </button>
+          {/* Menü öğeleri */}
+          <div className="flex flex-col items-center justify-center flex-grow py-8 bg-[#000000]">
+            <nav className="w-64 flex flex-col space-y-4">
+              <div 
+                onClick={() => handleMenuClick('home')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'home' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">Home</span>
+              </div>
+              
+              <div 
+                onClick={() => handleMenuClick('about')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'about' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">About</span>
+              </div>
+              
+              <div 
+                onClick={() => handleMenuClick('skills')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'skills' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">Skills</span>
+              </div>
+              
+              <div 
+                onClick={() => handleMenuClick('projects')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'projects' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">Projects</span>
+              </div>
+              
+              <div 
+                onClick={() => handleMenuClick('blog')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'blog' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">Blog</span>
+              </div>
+              
+              <div 
+                onClick={() => handleMenuClick('contact')}
+                className={`cursor-pointer px-4 py-3 border-l-2 ${activeSection === 'contact' ? 'border-[rgb(var(--color-primary))] text-[rgb(var(--color-primary))]' : 'border-[#333333] text-[rgb(var(--color-text))]'} hover:border-[rgb(var(--color-primary))] hover:text-[rgb(var(--color-primary))] transition-all duration-300`}
+              >
+                <span className="font-medium text-lg">Contact</span>
+              </div>
+            </nav>
           </div>
+          
+          {/* Alt kısım */}
+          <div className="h-px w-full bg-[rgb(var(--color-primary))]/20 mb-8 relative z-10 bg-[#000000]"></div>
         </div>
       )}
     </>
