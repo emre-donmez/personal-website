@@ -6,9 +6,7 @@ import { ThemeProvider } from "../context/ThemeContext";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Emre Dönmez | Yazılım Geliştirici",
-  description: ".NET Core, SQL, RESTful API, CI/CD, JavaScript ve daha fazlasında uzmanlaşmış yazılım geliştirici",
-};
+  title: "Emrecan Dönmez"};
 
 export default function RootLayout({
   children,
