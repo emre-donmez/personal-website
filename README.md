@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emre Dönmez Personal Website
 
-## Getting Started
+This project is the personal website of Emre Dönmez. It was developed using Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## Features
 
+- Single-page, minimalist design with dark theme
+- GitHub projects integration
+- Medium articles integration
+- Responsive design
+- Contact information
+
+## Installation
+
+1. Clone the project:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/emre-donmez/personal-website.git
+cd personal-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/page.tsx`: Main page component
+- `src/styles/globals.css`: Global CSS styles
+- `public/images/`: Images
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Required Images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Before running the project, you need to add the following images:
 
-## Deploy on Vercel
+- `public/images/profile.jpg`: Profile picture
+- `public/images/medium-placeholder.jpg`: Default image for Medium articles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+To deploy the project:
+
+```bash
+npm run build
+npm run start
+```
+
+## License
+
+This project is licensed under the MIT License.
