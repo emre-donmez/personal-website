@@ -6,7 +6,7 @@ export const PERSONAL_INFO = {
   bio: 'A software developer dedicated to creating value through innovative solutions and continuous improvement.',
   github: 'emre-donmez',
   medium: 'emrecandonmez',
-  linkedin: 'emredonmez'
+  linkedin: 'emrecan-donmez'
 };
 
 // Sosyal medya URL'leri
