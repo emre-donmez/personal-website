@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaHandsClapping } from 'react-icons/fa6';
 import { MediumPost } from './types';
-import { extractClapCount } from './utils';
 import { fetchMediumPosts } from './services/api';
 import Section from './ui/Section';
 import Card, { CardContent, CardFooter } from './ui/Card';
@@ -35,7 +33,7 @@ export default function Blog() {
             <Card key={index}>
               <CardContent>
                 <h3 className="text-xl font-semibold mb-2 text-teal-400 line-clamp-2">{post.title}</h3>
-                <div className="flex justify-between items-center mb-4">
+                <div className="mb-4">
                   <p className="text-gray-400 text-sm">
                     {new Date(post.pubDate).toLocaleDateString('en-US', {
                       year: 'numeric',
@@ -43,10 +41,6 @@ export default function Blog() {
                       day: 'numeric'
                     })}
                   </p>
-                  <div className="flex items-center text-gray-300">
-                    <FaHandsClapping className="text-teal-400 mr-1" />
-                    <span>{extractClapCount(post.content || '')}</span>
-                  </div>
                 </div>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.categories.slice(0, 3).map((category, idx) => (
