@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 // Ana bileşen
 export default function Home() {
@@ -57,6 +58,7 @@ export default function Home() {
       <Blog />
       <Contact />
       <Footer />
+      <Analytics />
     </div>
   );
 } 
