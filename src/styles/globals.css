@@ -15,6 +15,33 @@
   --color-text-secondary: 161, 161, 170; /* zinc-400 */
 }
 
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-bg-secondary));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--color-primary), 0.6);
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--color-primary), 0.9);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(var(--color-primary), 0.6) rgb(var(--color-bg-secondary));
+}
+
 @layer base {
   body {
     @apply bg-[rgb(var(--color-bg))] text-[rgb(var(--color-text))];
@@ -45,7 +72,7 @@
   }
   
   .section-title {
-    @apply text-3xl font-bold text-center mb-10 text-[rgb(var(--color-text))]
+    @apply text-3xl font-bold text-center mb-10 text-[rgb(var(--color-text))] 
            relative inline-block after:content-[''] after:absolute after:w-16 after:h-[3px] 
            after:bg-[rgb(var(--color-primary))] after:-bottom-3 after:left-1/2 after:-translate-x-1/2 after:rounded-full;
   }
@@ -98,4 +125,4 @@
   .content-spacing {
     @apply mb-6 md:mb-8;
   }
-} 
+}
