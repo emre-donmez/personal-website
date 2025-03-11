@@ -35,7 +35,7 @@ export default function MobileMenu({ activeSection, scrollToSection }: MobileMen
     <>
       <button 
         onClick={toggleMenu} 
-        className="md:hidden text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300 border border-[rgb(var(--color-primary))]/20 rounded-md hover:bg-[rgb(var(--color-primary))]/5"
+        className="md:hidden text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300  rounded-md hover:bg-[rgb(var(--color-primary))]/5"
         aria-label="Toggle mobile menu"
       >
         <span className="text-xl">☰</span>
@@ -47,7 +47,7 @@ export default function MobileMenu({ activeSection, scrollToSection }: MobileMen
           <div className="flex justify-end p-4 border-b border-[rgb(var(--color-primary))]/20 relative z-10 bg-[#000000]">
             <button 
               onClick={toggleMenu}
-              className="text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300 border border-[rgb(var(--color-primary))]/20 rounded-md hover:bg-[rgb(var(--color-primary))]/5"
+              className="text-[rgb(var(--color-text))] hover:text-[rgb(var(--color-primary))] p-2 transition-all duration-300  rounded-md hover:bg-[rgb(var(--color-primary))]/5"
               aria-label="Close mobile menu"
             >
               <FaTimes className="w-5 h-5" />
