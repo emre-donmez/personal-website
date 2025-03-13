@@ -4,7 +4,6 @@ import Card from './ui/Card';
 export default function About() {
   return (
     <Section id="about" title="About Me" bgColor="secondary">
-      <div className="max-w-3xl mx-auto">
         <Card className="p-6 md:p-8">
           <p className="text-[rgb(var(--color-text))] mb-8 leading-relaxed">
             I focus on developing sustainable, high-quality software using clean code principles, design patterns, and agile methodology.
@@ -35,7 +34,6 @@ export default function About() {
             </div>
           </div>
         </Card>
-      </div>
     </Section>
   );
 } 
