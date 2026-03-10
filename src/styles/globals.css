@@ -13,6 +13,13 @@
   --color-bg-secondary: 18, 18, 22; /* Daha koyu zinc */
   --color-text: 250, 250, 250; /* Beyaza yakın metin */
   --color-text-secondary: 161, 161, 170; /* zinc-400 */
+
+  /* Menü sayfası renkleri — sıcak kahve teması */
+  --menu-bg: 18, 14, 12;
+  --menu-card: 32, 26, 22;
+  --menu-accent: 193, 154, 107;
+  --menu-text: 245, 240, 235;
+  --menu-text-secondary: 168, 156, 144;
 }
 
 /* Custom Scrollbar Styling */
