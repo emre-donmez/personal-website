@@ -1,5 +1,7 @@
 import { GitHubRepo, MediumPost } from '../types';
 
+type MediumRssItem = Omit<MediumPost, 'content'> & { content?: string };
+
 // GitHub API çağrıları
 export const fetchGitHubRepos = async (username: string, perPage: number = 6): Promise<GitHubRepo[]> => {
   try {
@@ -27,7 +29,7 @@ export const fetchMediumPosts = async (username: string): Promise<MediumPost[]> 
     
     if (data.status === 'ok') {
       // İçerik bilgisini de içeren yazıları alıyoruz
-      return data.items.slice(0, 3).map((item: any) => ({
+      return data.items.slice(0, 3).map((item: MediumRssItem): MediumPost => ({
         ...item,
         // Eğer içerik yoksa boş string kullanıyoruz
         content: item.content || ''
